@@ -15,7 +15,7 @@ A crescente sofisticação dos modelos de IA generativa apresenta desafios signi
 
 Nosso método não é um classificador monolítico, mas um pipeline de análise que avalia uma representação latente com base em diferentes "lentes":
 
-* **Unicidade de Componentes:** Utiliza a Análise de Componentes Principais (PCA) para decompor a representação e avalia a singularidade estatística de seus componentes.
+* **Unicidade de Componentes:** Utiliza a Análise de Componentes Principais (ICA) para decompor a representação e avalia a singularidade estatística de seus componentes.
 * **Originalidade Entrópica:** Mede a complexidade informacional (entropia) tanto do vetor em si quanto de sua vizinhança no espaço latente.
 * **Estabilidade Temporal Simulada:** Testa a robustez da identidade da representação sob pequenas perturbações, simulando a coerência ao longo do tempo.
 
