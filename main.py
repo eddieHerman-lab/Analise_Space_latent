@@ -2,6 +2,7 @@ import torch
 import numpy
 from model import EyeVAE
 from analysis_framework import LatentSpaceAnalyzer, ComponentDecomposer, EntropicOriginalityMeasure, TemporalStabilityAnalyzer
+from data_utils import gerar_dados_sinteticos
 
 # Função demo melhorada
 def demo_with_latent_analysis():
