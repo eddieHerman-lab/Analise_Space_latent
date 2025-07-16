@@ -1,3 +1,5 @@
+import torch
+import numpy
 from model import EyeVAE
 from analysis_framework import LatentSpaceAnalyzer, ComponentDecomposer, EntropicOriginalityMeasure, TemporalStabilityAnalyzer
 
