@@ -1,4 +1,4 @@
-import numpy
+import numpy as np
 
 
 # Função demo completa com análise de autenticidade e geracao de dado sinteticos
