@@ -54,11 +54,13 @@ Para executar o experimento principal com os dados sintéticos, basta rodar o sc
 ```bash
 python main.py
 
-Citação
-Se você achar este trabalho útil para sua pesquisa, por favor, cite nosso pré-print:
-
-[Formato da citação BibTeX que o arXiv fornecerá]
-Licença
-Este projeto é licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
+@misc{hermanson2025latent,
+  title={Análise Estrutural do Espaço Latente …},
+  author={Hermanson, Eduardo},
+  year={2025},
+  eprint={arXiv:XXXX.YYYYY},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}
 
 
