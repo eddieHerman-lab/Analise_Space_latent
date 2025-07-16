@@ -1,3 +1,11 @@
+import torch.nn as nn
+import torch
+import torch.nn.functional as F
+import torchvision.transforms as transforms
+
+
+
+
 class EyeVAE(nn.Module):
     """VAE aprimorado para análise de espaço latente"""
 
