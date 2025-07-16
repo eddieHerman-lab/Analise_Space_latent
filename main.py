@@ -3,6 +3,7 @@ import numpy
 from model import EyeVAE
 from analysis_framework import LatentSpaceAnalyzer, ComponentDecomposer, EntropicOriginalityMeasure, TemporalStabilityAnalyzer
 from data_utils import gerar_dados_sinteticos
+from pipeline import AnalysisPipeline 
 
 # Função demo melhorada
 def demo_with_latent_analysis():
@@ -46,7 +47,7 @@ def demo_with_latent_analysis():
         ground_truth_labels.append('authentic')  # para os templates
         ground_truth_labels.append('interpolated') # para as interpolações
     # Executar análise completa
-    tracker = FaceInfluenceTracker()
+    tracker = AnalysisPipeline()
     tracker.prepare_training_data(synthetic_eyes)
 
     print("2. Treinando VAE...")
