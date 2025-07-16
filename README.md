@@ -67,13 +67,20 @@ O projeto está organizado de forma modular para maior clareza e reusabilidade:
     ```bash
     pip install -r requirements.txt
     ```
+![Descrição do Gráfico](caminho/para/o/seu_grafico_final.png)
 
-## Como Usar
+### Tabela de Performance
 
-Para executar o experimento principal com os dados sintéticos, basta rodar o script principal:
+Resultados comparativos da otimização de hiperparâmetros, demonstrando a superioridade da "Configuração Otimizada" (Run 4).
 
-```bash
-python main.py
+| Configuração | TP | FP | FN | Precisão | Recall | **F1-Score** |
+| :--- | :--: | :--: | :--: | :---: | :---: | :---: |
+| Run 1 (Super Rigoroso, P95) | 2 | 1 | 198 | 66.67% | 1.00% | **1.97%** |
+| Run 2 (Rigoroso, P80) | 8 | 2 | 192 | 80.00% | 4.00% | **7.62%** |
+| Run 3 (Equilibrado, P65)| 3 | 5 | 197 | 37.50% | 1.50% | **2.88%** |
+| **Run 4 (Otimizado, P45)**| **15**| **0** | **185**| **100.00%**| **7.50%**| **13.95%**|
+
+
 
 
 
