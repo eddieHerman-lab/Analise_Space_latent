@@ -53,3 +53,12 @@ Para executar o experimento principal com os dados sintéticos, basta rodar o sc
 
 ```bash
 python main.py
+
+Citação
+Se você achar este trabalho útil para sua pesquisa, por favor, cite nosso pré-print:
+
+[Formato da citação BibTeX que o arXiv fornecerá]
+Licença
+Este projeto é licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
+
+
