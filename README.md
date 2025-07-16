@@ -2,10 +2,31 @@
 
 # Análise Estrutural do Espaço Latente para Avaliação de Autenticidade
 
+# 
+
+![Python](https://img.shields.io/badge/python-3.9+-blue.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![arXiv](https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg)](https://arxiv.org/abs/XXXX.XXXXX) Este repositório contém o código e os experimentos para a pesquisa "Análise Estrutural do Espaço Latente: Uma Abordagem Heurística para a Avaliação de Autenticidade em Modelos Generativos".
+[![arXiv](https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg)](https://arxiv.org/abs/XXXX.XXXXX) [![PyPI version](https://badge.fury.io/py/seu_pacote.svg)](https://badge.fury.io/py/seu_pacote) ```
+* **Nota sobre "Build Status" e "Coverage":** Badges de *build* (GitHub Actions) e *cobertura de testes* (Codecov) são mais avançados. Eles exigem a configuração de testes automatizados e integração contínua (CI/CD). Podemos considerá-los uma melhoria para a "v2.0" do seu projeto, após a publicação inicial.Este repositório contém o código e os experimentos para a pesquisa "Análise Estrutural do Espaço Latente: Uma Abordagem Heurística para a Avaliação de Autenticidade em Modelos Generativos".
 
 ---
+
+Um "microscópio" para a auditoria do espaço latente em modelos generativos.
+
+**Sumário (Table of Contents)**
+
+Essencial para a navegabilidade. Ele usa links de âncora que apontam para os títulos das seções.
+
+```markdown
+## Sumário
+- [Resumo](#resumo-abstract)
+- [Principais Heurísticas](#principais-heurísticas-do-framework)
+- [Estrutura do Repositório](#estrutura-do-repositório)
+- [Instalação](#instalação)
+- [Como Usar](#como-usar)
+- [Citação](#citação)
+
+
 
 ## Resumo (Abstract)
 
@@ -54,13 +75,5 @@ Para executar o experimento principal com os dados sintéticos, basta rodar o sc
 ```bash
 python main.py
 
-@misc{hermanson2025latent,
-  title={Análise Estrutural do Espaço Latente …},
-  author={Hermanson, Eduardo},
-  year={2025},
-  eprint={arXiv:XXXX.YYYYY},
-  archivePrefix={arXiv},
-  primaryClass={cs.CV}
-}
 
 
