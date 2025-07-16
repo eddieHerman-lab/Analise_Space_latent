@@ -66,7 +66,7 @@ O projeto está organizado de forma modular para maior clareza e reusabilidade:
 3.  Instale as dependências:
     ```bash
     pip install -r requirements.txt
-    ```
+ ```
 ![Descrição do Gráfico](caminho/para/o/seu_grafico_final.png)
 
 ### Tabela de Performance
