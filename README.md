@@ -49,82 +49,12 @@ To run the analysis on the synthetic dataset, you can execute the main script. T
 ```bash
 python src/main.py
 
-
-
-
-# Análise Estrutural do Espaço Latente para Avaliação de Autenticidade
-
-# 
-
-![Python](https://img.shields.io/badge/python-3.9+-blue.svg)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![arXiv](https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg)](https://arxiv.org/abs/XXXX.XXXXX) [![PyPI version](https://badge.fury.io/py/seu_pacote.svg)](https://badge.fury.io/py/seu_pacote) ```
-Análise Estrutural do Espaço Latente: Uma Abordagem Heurística para a Avaliação de Autenticidade em Modelos Generativos".
-
----
-
-Um "microscópio" para a auditoria do espaço latente em modelos generativos.
-
-**Sumário (Table of Contents)**
-
-Essencial para a navegabilidade. Ele usa links de âncora que apontam para os títulos das seções.
-
-```markdown
-## Sumário
-- [Resumo](#resumo-abstract)
-- [Principais Heurísticas](#principais-heurísticas-do-framework)
-- [Estrutura do Repositório](#estrutura-do-repositório)
-- [Instalação](#instalação)
-- [Como Usar](#como-usar)
-- [Citação](#citação)
-
-
-
-## Resumo (Abstract)
-
-A crescente sofisticação dos modelos de IA generativa apresenta desafios significativos para a auditoria de conteúdo e a detecção de autenticidade, em grande parte devido à natureza de "caixa-preta" de seus espaços latentes. Para endereçar essa lacuna, este trabalho propõe um novo framework para a análise forense do espaço latente, que opera não como um classificador, mas como um "microscópio" para investigar as propriedades estruturais das representações. Nossa metodologia emprega um funil de heurísticas, incluindo Análise de Componentes, Originalidade Entrópica e Estabilidade Temporal Simulada, para gerar um score de validação multifacetado. Através de experimentos em um dataset sintético controlado, demonstramos que o framework pode ser calibrado para otimizar o balanço entre precisão e recall, alcançando um F1-Score de 13.95% com 100% de precisão na identificação de núcleos de identidade autêntica. Concluímos que esta abordagem de análise intrínseca oferece um caminho promissor para o desenvolvimento de ferramentas de IA Explicável (XAI) para auditoria de conteúdo e futuras aplicações em análise de criatividade.
-
-## Principais Heurísticas do Framework
-
-Nosso método não é um classificador monolítico, mas um pipeline de análise que avalia uma representação latente com base em diferentes "lentes":
-
-* **Unicidade de Componentes:** Utiliza a Análise de Componentes Principais (ICA) para decompor a representação e avalia a singularidade estatística de seus componentes.
-* **Originalidade Entrópica:** Mede a complexidade informacional (entropia) tanto do vetor em si quanto de sua vizinhança no espaço latente.
-* **Estabilidade Temporal Simulada:** Testa a robustez da identidade da representação sob pequenas perturbações, simulando a coerência ao longo do tempo.
-
-## Estrutura do Repositório
-
-O projeto está organizado de forma modular para maior clareza e reusabilidade:
-
--   `main.py`: O script principal que orquestra e executa o pipeline de análise completo.
--   `pipeline.py`: Contém a classe `AnalysisPipeline`, que gerencia o fluxo de trabalho de treinamento e análise.
--   `model.py`: Define a arquitetura da rede neural `EyeVAE`.
--   `analysis_framework.py`: Contém as classes para cada heurística de análise (`ComponentDecomposer`, `EntropicOriginalityMeasure`, etc.).
--   `data_utils.py`: Funções para a geração de dados sintéticos.
--   `requirements.txt`: Lista de todas as dependências do projeto.
-
-## Instalação
-
-1.  Clone este repositório:
-    ```bash
-    git clone [URL_DO_SEU_REPOSITORIO]
-    cd [NOME_DA_PASTA]
-    ```
-2.  Crie um ambiente virtual (recomendado):
-    ```bash
-    python -m venv .venv
-    source .venv/bin/activate  # No Windows: .venv\Scripts\activate
-    ```
-3.  Instale as dependências:
-    ```bash
-    pip install -r requirements.txt
  ```
 ![Descrição do Gráfico](caminho/para/o/seu_grafico_final.png)
 
-### Tabela de Performance
+### Performance Table
 
-Resultados comparativos da otimização de hiperparâmetros, demonstrando a superioridade da "Configuração Otimizada" (Run 4).
-
+Comparative results of hyperparameter optimization, demonstrating the superiority of the "Optimized Configuration" (Run 4).
 | Configuração | TP | FP | FN | Precisão | Recall | **F1-Score** |
 | :--- | :--: | :--: | :--: | :---: | :---: | :---: |
 | Run 1 (Super Rigoroso, P95) | 2 | 1 | 198 | 66.67% | 1.00% | **1.97%** |
@@ -132,6 +62,34 @@ Resultados comparativos da otimização de hiperparâmetros, demonstrando a supe
 | Run 3 (Equilibrado, P65)| 3 | 5 | 197 | 37.50% | 1.50% | **2.88%** |
 | **Run 4 (Otimizado, P45)**| **15**| **0** | **185**| **100.00%**| **7.50%**| **13.95%**|
 
+
+# Part 2: CelebA Case Study
+## The main analysis on real-world data is contained in the Jupyter Notebook notebook_analise_celeba.ipynb.
+
+Data Setup: Please follow the instructions in the data/README_data.md file to download and set up the CelebA dataset.
+
+Pre-trained Model: Download the pre-trained model weights from [Your Google Drive Link Here] and place the file inside the pretrained_models/ directory.
+
+Run Notebook: Open the notebook in a Jupyter or Google Colab environment and run the cells from top to bottom.
+
+Key Results
+The framework successfully identified and quantified a main stereotypical cluster (SBS=75.15%) and a creative niche (highest average CLS) in the CelebA latent space. The Heuristic Map revealed a strong positive correlation (Spearman's ρ = 0.64) between Uniqueness and Originality, defining a "Creative Path".
+
+Citation
+If you find this work useful in your research, please consider citing the preprint:
+
+Snippet de código
+
+@article{hermanson2025microscopic,
+  title={Microscopic Analysis of the Latent Space: Heuristics for Interpretability, Authenticity, and Bias Detection in VAE Representations},
+  author={Hermanson, Eduardo Augusto Pires},
+  journal={Zenodo},
+  year={2025},
+  doi={Your_DOI_Here},
+  url={https://...}
+}
+Acknowledgements
+This work was developed with the assistance of several Artificial Intelligence tools that acted as research assistants. Language models such as Gemini (Google), Claude (Anthropic), ChatGPT (OpenAI), and DeepSeek were utilized in various stages of the process, including the generation and debugging of Python code, brainstorming methodological approaches, summarizing related articles, and rephrasing paragraphs to improve clarity and conciseness. The final responsibility for the content, analyses, and conclusions presented herein lies entirely with the author.
 
 
 
