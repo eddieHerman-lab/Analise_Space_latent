@@ -1,5 +1,57 @@
 # Analise_Space_latent
 
+# Microscopic Analysis of the Latent Space: An XAI Framework
+
+[![Language](https://img.shields.io/badge/Language-Python-blue.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+This repository contains the official code for the paper "Microscopic Analysis of the Latent Space: Heuristics for Interpretability, Authenticity, and Bias Detection in VAE Representations".
+
+**[Read the full Pre-Print on Zenodo (Your DOI Link Here)](https://...)**
+
+---
+
+### Abstract
+
+The growing sophistication of generative AI models presents significant challenges for content auditing and authenticity detection, largely due to the "black-box" nature of their latent spaces. To address this gap, this paper proposes a new framework for the structural analysis of the latent space, which operates not as a classifier, but as a "microscope" to investigate the structural properties of the representations. Our methodology was validated on a controlled synthetic dataset and then applied to a real-world case study on the CelebA dataset, revealing the framework's dual potential as a tool for both auditing bias and discovering creative outliers.
+
+### Key Heuristics
+The framework is built on a funnel of quantitative heuristics:
+* **Uniqueness:** Measures the topological distinction of a sample based on its statistical independence and spatial isolation.
+* **Originality:** Quantifies informational complexity using spectral and spatial entropy.
+* **Creative Latent Score (CLS):** A combined metric to navigate the creative frontier of the latent space.
+* **Bias Metrics (SBS & ABI):** Scores to identify and characterize stereotypical clusters.
+
+### Project Structure
+
+This repository is divided into two main parts:
+
+1.  **Synthetic Environment (`/src`):** The Python scripts (`.py`) used for the experiments on the synthetic dataset, as described in Section 4 of the paper. This includes model training, hyperparameter optimization, and heuristic validation.
+2.  **CelebA Case Study (`.ipynb`):** A complete Jupyter Notebook (`notebook_analise_celeba.ipynb`) containing the full analysis pipeline applied to the CelebA dataset, as described in Section 6 of the paper.
+
+### Setup and Installation
+
+1.  Clone the repository:
+    ```bash
+    git clone [https://github.com/eddieHerman-lab/Analise_Space_latent.git](https://github.com/eddieHerman-lab/Analise_Space_latent.git)
+    cd Analise_Space_latent
+    ```
+2.  Install the required libraries:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+### Usage
+
+#### Part 1: Synthetic Environment
+
+To run the analysis on the synthetic dataset, you can execute the main script. The code will generate a synthetic dataset and run the full analysis pipeline.
+```bash
+python src/main.py
+
+
+
+
 # Análise Estrutural do Espaço Latente para Avaliação de Autenticidade
 
 # 
