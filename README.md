@@ -78,7 +78,7 @@ The framework successfully identified and quantified a main stereotypical cluste
 Citation
 If you find this work useful in your research, please consider citing the preprint:
 
-Snippet de código
+Code Snippet
 
 @article{hermanson2025microscopic,
   title={Microscopic Analysis of the Latent Space: Heuristics for Interpretability, Authenticity, and Bias Detection in VAE Representations},
@@ -88,6 +88,8 @@ Snippet de código
   doi={Your_DOI_Here},
   url={https://...}
 }
+
+
 Acknowledgements
 This work was developed with the assistance of several Artificial Intelligence tools that acted as research assistants. Language models such as Gemini (Google), Claude (Anthropic), ChatGPT (OpenAI), and DeepSeek were utilized in various stages of the process, including the generation and debugging of Python code, brainstorming methodological approaches, summarizing related articles, and rephrasing paragraphs to improve clarity and conciseness. The final responsibility for the content, analyses, and conclusions presented herein lies entirely with the author.
 
