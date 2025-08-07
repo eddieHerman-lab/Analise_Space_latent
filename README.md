@@ -55,12 +55,12 @@ python src/main.py
 ### Performance Table
 
 Comparative results of hyperparameter optimization, demonstrating the superiority of the "Optimized Configuration" (Run 4).
-| Configuração | TP | FP | FN | Precisão | Recall | **F1-Score** |
+| Configuration | TP | FP | FN | Precision | Recall | **F1-Score** |
 | :--- | :--: | :--: | :--: | :---: | :---: | :---: |
-| Run 1 (Super Rigoroso, P95) | 2 | 1 | 198 | 66.67% | 1.00% | **1.97%** |
-| Run 2 (Rigoroso, P80) | 8 | 2 | 192 | 80.00% | 4.00% | **7.62%** |
-| Run 3 (Equilibrado, P65)| 3 | 5 | 197 | 37.50% | 1.50% | **2.88%** |
-| **Run 4 (Otimizado, P45)**| **15**| **0** | **185**| **100.00%**| **7.50%**| **13.95%**|
+| Run 1 (Highly Strict, P95) | 2 | 1 | 198 | 66.67% | 1.00% | **1.97%** |
+| Run 2 (Strict, P80) | 8 | 2 | 192 | 80.00% | 4.00% | **7.62%** |
+| Run 3 (Balanced, P65)| 3 | 5 | 197 | 37.50% | 1.50% | **2.88%** |
+| **Run 4 (Optimized, P45)**| **15**| **0** | **185**| **100.00%**| **7.50%**| **13.95%**|
 
 
 # Part 2: CelebA Case Study
