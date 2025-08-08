@@ -45,6 +45,15 @@ Comparative results of hyperparameter optimization, demonstrating the superiorit
 | Run 3 (Balanced, P65)| 3 | 5 | 197 | 37.50% | 1.50% | **2.88%** |
 | **Run 4 (Optimized, P45)**| **15**| **0** | **185**| **100.00%**| **7.50%**| **13.95%**|
 
+
+2 Dataset with CelebA
+### Viewing the Notebook
+
+This repository contains the source code in the `.ipynb` file. The GitHub interface may fail to render this large notebook.
+
+**<a href="[https://nbviewer.org/github/eddieHerman-lab/Analise_Space_latent/blob/main/VAe_Ressearch_Space_latent_Analysis.ipynb]" target="_blank">Click here to view the fully rendered notebook with all figures and outputs via nbviewer.</a>**
+
+
 ## Quick start
 
 ## Quick start (minimal)
