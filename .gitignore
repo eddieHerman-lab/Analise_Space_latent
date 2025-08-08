@@ -1,9 +1,35 @@
-# data and credentials
+# Credentials and API keys
 .kaggle/
 kaggle.json
+.env
+*.env
+
+# Data and outputs
 data/
+datasets/
 outputs/
+results/
 models/
+checkpoints/
 *.pth
 *.ckpt
+*.h5
+*.pt
+
+# Notebook checkpoints
 .ipynb_checkpoints
+
+# OS / Python
+.DS_Store
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual env
+venv/
+.env/
+.venv/
+
+# Logs
+logs/
+*.log
