@@ -47,11 +47,12 @@ Comparative results of hyperparameter optimization, demonstrating the superiorit
 
 
 2 Dataset with CelebA
+
 ### Viewing the Notebook
 
 This repository contains the source code in the `.ipynb` file. The GitHub interface may fail to render this large notebook.
 
-**<a href="[https://nbviewer.org/github/eddieHerman-lab/Analise_Space_latent/blob/main/VAe_Ressearch_Space_latent_Analysis.ipynb]" target="_blank">Click here to view the fully rendered notebook with all figures and outputs via nbviewer.</a>**
+**<a href="[COLE O SEU LINK DO NBVIEWER AQUI]" target="_blank">Click here to view the fully rendered notebook with all figures and outputs via nbviewer.</a>**
 
 
 ## Quick start
