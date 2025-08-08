@@ -3,7 +3,10 @@
 # Microscopic Analysis of the Latent Space: An XAI Framework
 
 [![Language](https://img.shields.io/badge/Language-Python-blue.svg)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)]()
+[![arXiv](https://img.shields.io/badge/arXiv-preprint-lightgrey.svg)]()  <!-- add arXiv link after submission -->
+
 
 This repository contains the official code for the paper "Microscopic Analysis of the Latent Space: Heuristics for Interpretability, Authenticity, and Bias Detection in VAE Representations".
 
@@ -61,6 +64,37 @@ Comparative results of hyperparameter optimization, demonstrating the superiorit
 | Run 2 (Strict, P80) | 8 | 2 | 192 | 80.00% | 4.00% | **7.62%** |
 | Run 3 (Balanced, P65)| 3 | 5 | 197 | 37.50% | 1.50% | **2.88%** |
 | **Run 4 (Optimized, P45)**| **15**| **0** | **185**| **100.00%**| **7.50%**| **13.95%**|
+
+## Quick start
+
+```bash
+# 1) Clone
+git clone https://github.com/eddieHerman-lab/Analise_Space_latent.git
+cd Analise_Space_latent
+
+# 2) Install (recommended: venv)
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+
+# 3) Run the example pipeline (synthetic dataset)
+python main.py --mode synthetic
+
+Adapta `main.py --mode synthetic` aos argumentos que o teu script realmente aceita.
+
+---
+
+### 3) **Data Instructions (Kaggle)**  
+**Porquê:** CelebA is not trivial — need  credencials; explain avoid suport.  
+**Trecho pronto:**
+```markdown
+## Data (CelebA subset)
+
+We use Kaggle to fetch CelebA. Place your `kaggle.json` at `~/.kaggle/kaggle.json` (chmod 600), then:
+
+```bash
+# example: download and unzip
+kaggle datasets download -d <dataset-id> -p data/celeba --unzip
 
 
 # Part 2: CelebA Case Study
