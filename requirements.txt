@@ -8,3 +8,5 @@ seaborn
 networkx
 hdbscan
 Pillow
+!pip install -r requirements.txt
+
