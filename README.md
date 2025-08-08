@@ -1,11 +1,10 @@
 # Analise_Space_latent
 
-# Microscopic Analysis of the Latent Space: An XAI Framework
+# Microscopic Analysis of the Latent Space:  Heuristic Latent-Space Forensic Framework, An XAI Framework
 
-[![Language](https://img.shields.io/badge/Language-Python-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)]()
-[![arXiv](https://img.shields.io/badge/arXiv-preprint-lightgrey.svg)]()  <!-- add arXiv link after submission -->
+[![arXiv](https://img.shields.io/badge/arXiv-preprint-lightgrey.svg)]()  <!-- add arXiv / DOI after publication -->
 
 
 This repository contains the official code for the paper "Microscopic Analysis of the Latent Space: Heuristics for Interpretability, Authenticity, and Bias Detection in VAE Representations".
@@ -32,27 +31,8 @@ This repository is divided into two main parts:
 1.  **Synthetic Environment (`/src`):** The Python scripts (`.py`) used for the experiments on the synthetic dataset, as described in Section 4 of the paper. This includes model training, hyperparameter optimization, and heuristic validation.
 2.  **CelebA Case Study (`.ipynb`):** A complete Jupyter Notebook (`notebook_analise_celeba.ipynb`) containing the full analysis pipeline applied to the CelebA dataset, as described in Section 6 of the paper.
 
-### Setup and Installation
 
-1.  Clone the repository:
-    ```bash
-    git clone [https://github.com/eddieHerman-lab/Analise_Space_latent.git](https://github.com/eddieHerman-lab/Analise_Space_latent.git)
-    cd Analise_Space_latent
-    ```
-2.  Install the required libraries:
-    ```bash
-    pip install -r requirements.txt
-    ```
 
-### Usage
-
-#### Part 1: Synthetic Environment
-
-To run the analysis on the synthetic dataset, you can execute the main script. The code will generate a synthetic dataset and run the full analysis pipeline.
-```bash
-python src/main.py
-
- ```
 ![Descrição do Gráfico](caminho/para/o/seu_grafico_final.png)
 
 ### Performance Table
@@ -67,8 +47,10 @@ Comparative results of hyperparameter optimization, demonstrating the superiorit
 
 ## Quick start
 
+## Quick start (minimal)
+
+1. Clone:
 ```bash
-# 1) Clone
 git clone https://github.com/eddieHerman-lab/Analise_Space_latent.git
 cd Analise_Space_latent
 
@@ -77,51 +59,133 @@ python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 
-# 3) Run the example pipeline (synthetic dataset)
-python main.py --mode synthetic
+# 3) Download data (Kaggle required):
 
-Adapta `main.py --mode synthetic` aos argumentos que o teu script realmente aceita.
+Put your kaggle.json in ~/.kaggle/kaggle.json (chmod 600), then:
+
+bash
+Copy
+Edit
+bash scripts/download_data.sh
+# Edit scripts/download_data.sh to set DATASET_ID first
+
+What to expect in this repo
+notebooks/ — full Colab notebook with the full pipeline and figures.
+
+scripts/ — small helpers: download, create demo subset.
+
+outputs/ — curated PNGs used in the preprint (kept small).
+
+requirements.txt — pinned deps for reproducibility.
+
+LICENSE, CITATION.cff, .gitignore
+
+Reproducibility tips
+Do not commit kaggle.json or any model checkpoints.
+
+If you want identical figures, use the PNGs in outputs/ or fix the normalization bounds and seeds in the notebook plotting cells (set_xlim, set_ylim, fixed min/max values).
+
+Outputs: The main paper figures are stored in outputs/images/ — run the notebook only if you want to reproduce the pipeline"
+
+
+Set seeds in the notebook for NumPy/PyTorch/UMAP for more stable visuals.
+
+Cite
+When using this work, please cite the preprint (fill DOI/URL after publication):
+Hermanson, E. (2025). Microscopic analysis of latent spaces: SBS/ABI/CLS heuristics. Preprint. <DOI/URL>
+
+Contact
+For collaboration or questions: eddieHerman-lab@ (or open an issue).
+
+yaml
+Copiar
+Editar
 
 ---
 
-### 3) **Data Instructions (Kaggle)**  
-**Porquê:** CelebA is not trivial — need  credencials; explain avoid suport.  
-**Trecho pronto:**
-```markdown
-## Data (CelebA subset)
+## 2) `.gitignore` (cole na raiz)
 
-We use Kaggle to fetch CelebA. Place your `kaggle.json` at `~/.kaggle/kaggle.json` (chmod 600), then:
+Credentials and API keys
+.kaggle/
+kaggle.json
+.env
+*.env
 
-```bash
-# example: download and unzip
-kaggle datasets download -d <dataset-id> -p data/celeba --unzip
+Data and outputs
+data/
+datasets/
+outputs/
+results/
+models/
+checkpoints/
+*.pth
+*.ckpt
+*.h5
+*.pt
 
+Notebook checkpoints
+.ipynb_checkpoints
 
-# Part 2: CelebA Case Study
-## The main analysis on real-world data is contained in the Jupyter Notebook notebook_analise_celeba.ipynb.
+OS / Python
+.DS_Store
+pycache/
+*.py[cod]
 
-Data Setup: Please follow the instructions in the data/README_data.md file to download and set up the CelebA dataset.
+Virtual env
+.venv/
+venv/
 
-Pre-trained Model: Download the pre-trained model weights from [Your Google Drive Link Here] and place the file inside the pretrained_models/ directory.
+Logs
+logs/
+*.log
 
-Run Notebook: Open the notebook in a Jupyter or Google Colab environment and run the cells from top to bottom.
+yaml
+Copiar
+Editar
 
-Key Results
-The framework successfully identified and quantified a main stereotypical cluster (SBS=75.15%) and a creative niche (highest average CLS) in the CelebA latent space. The Heuristic Map revealed a strong positive correlation (Spearman's ρ = 0.64) between Uniqueness and Originality, defining a "Creative Path".
+---
 
-Citation
-If you find this work useful in your research, please consider citing the preprint:
+## 3) `requirements.txt` (cole na raiz)
 
-Code Snippet
+numpy==1.25.2
+scipy==1.11.2
+pandas==2.2.2
+matplotlib==3.8.1
+seaborn==0.12.2
+scikit-learn==1.3.2
+torch==2.1.0
+torchvision==0.16.0
+hdbscan==0.8.34
+umap-learn==0.5.4
+moviepy==1.1.3
+Pillow==10.0.1
+tqdm==4.66.1
+kaggle==1.5.17
+ipython==8.18.0
 
-@article{hermanson2025microscopic,
-  title={Microscopic Analysis of the Latent Space: Heuristics for Interpretability, Authenticity, and Bias Detection in VAE Representations},
-  author={Hermanson, Eduardo Augusto Pires},
-  journal={Zenodo},
-  year={2025},
-  doi={Your_DOI_Here},
-  url={https://...}
-}
+yaml
+Copiar
+Editar
+
+> Nota: se você for rodar em Colab com GPU, pode instalar `torch` com a roda CUDA apropriada — deixe instrução no README se quiser.
+
+---
+
+## 4) `CITATION.cff` 
+
+```yaml
+cff-version: 1.2.0
+message: "If you use this code, please cite the preprint (Herman, 2025)."
+title: "Microscopic analysis of latent spaces: SBS/ABI/CLS heuristics"
+version: "v0.1.0"
+doi: "<DOI-OR-ARXIV-LINK>"
+authors:
+  - family-names: Herman
+    given-names: Eduardo
+date-released: 2025-08-XX
+license: "MIT"
+url: "https://github.com/eddieHerman-lab/Analise_Space_latent"
+
 
 
 Acknowledgements
