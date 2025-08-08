@@ -1,0 +1,9 @@
+# data and credentials
+.kaggle/
+kaggle.json
+data/
+outputs/
+models/
+*.pth
+*.ckpt
+.ipynb_checkpoints
