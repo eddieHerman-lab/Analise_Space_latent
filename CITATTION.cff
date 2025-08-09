@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite the preprint and the code."
+title: "Microscopic analysis of the latent space: heuristics for interpretability, authenticity, and bias detection in VAE representations"
+version: "v0.1.0"
+doi: "DOI:10.0000/zenodo.xxxxxxx"   # substitua pelo DOI do Zenodo depois da publicação
+authors:
+  - family-names: Hermanson
+    given-names: Eduardo Augusto Pires
+    affiliation: "Independent Researcher / Cruzeiro do Sul"
+date-released: 2025-08-XX
+url: "https://github.com/eddieHerman-lab/Analise_Space_latent"
+license: "MIT"
+abstract: "We propose a modular framework (SBS / ABI / CLS) to analyze structural properties of latent spaces in generative models (VAE/CVAE). The framework computes ICA-based Uniqueness, entropic Originality and simulated Stability. Validated in synthetic data and on a CelebA case study; code and selected outputs are provided."
